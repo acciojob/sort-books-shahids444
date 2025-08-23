@@ -235,7 +235,7 @@ function BooksList() {
         <div className="bg-white rounded-lg shadow-lg">
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-t-lg px-6 py-8">
-            <h1 className="text-3xl font-bold text-center mb-2">Book Library</h1>
+            <h1 className="text-3xl font-bold text-center mb-2" data-testid="header-title">Books List</h1>
             <p className="text-center text-blue-100">Discover and sort your favorite books</p>
           </div>
 
@@ -248,6 +248,7 @@ function BooksList() {
                 </label>
                 <select
                   id="sortBy"
+                  data-testid="sort-criteria"
                   value={state.sortCriteria}
                   onChange={handleSortCriteriaChange}
                   className="border border-gray-300 rounded-md px-3 py-2 bg-white text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
@@ -264,6 +265,7 @@ function BooksList() {
                 </label>
                 <select
                   id="sortOrder"
+                  data-testid="sort-order"
                   value={state.sortOrder}
                   onChange={handleSortOrderChange}
                   className="border border-gray-300 rounded-md px-3 py-2 bg-white text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
@@ -281,7 +283,7 @@ function BooksList() {
 
           {/* Books Table */}
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full" data-testid="books-table">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
