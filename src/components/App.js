@@ -61,7 +61,39 @@ const mockBooksData = [
     author: "Harper Lee",
     publisher: "J.B. Lippincott & Co.",
     isbn: "9780061120084"
-  }
+  },
+  // Add these 5 additional books to your mockBooksData array
+{
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  publisher: "Scribner",
+  isbn: "9780743273565"
+},
+{
+  title: "Pride and Prejudice",
+  author: "Jane Austen",
+  publisher: "T. Egerton",
+  isbn: "9780141439518"
+},
+{
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publisher: "Allen & Unwin",
+  isbn: "9780547928227"
+},
+{
+  title: "Harry Potter and the Philosopher's Stone",
+  author: "J.K. Rowling",
+  publisher: "Bloomsbury",
+  isbn: "9780747532699"
+},
+{
+  title: "The Catcher in the Rye",
+  author: "J.D. Salinger",
+  publisher: "Little, Brown and Company",
+  isbn: "9780316769488"
+}
+  
 ];
 
 // Redux-like action types
