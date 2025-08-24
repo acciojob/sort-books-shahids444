@@ -178,17 +178,16 @@ function BooksList() {
   const [state, dispatch] = useReducer(booksReducer, initialState);
 
   // Simulate API fetch
-  const fetchBooks = async () => {
-    dispatch(fetchBooksStart());
-    try {
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      dispatch(fetchBooksSuccess(mockBooksData));
-    } catch (error) {
-      dispatch(fetchBooksError('Failed to fetch books'));
-    }
-  };
-
+  const fetchBooks = () => {
+     dispatch(fetchBooksStart());
+     new Promise(resolve => setTimeout(resolve, 1000))
+       .then(() => {
+         dispatch(fetchBooksSuccess(mockBooksData));
+       })
+       .catch(error => {
+         dispatch(fetchBooksError('Failed to fetch books'));
+       });
+   };
   useEffect(() => {
     fetchBooks();
   }, []);
